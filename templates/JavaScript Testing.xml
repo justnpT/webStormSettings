@@ -74,4 +74,11 @@
       <option name="XML" value="false" />
     </context>
   </template>
+  <template name="describerenten" value="describe(&quot;Unregistered user&quot;, function() {&#10;  context(&quot;who lands on $PAGE$&quot;, function() {&#10;    before(function (){&#10;      browser.url(&quot;http://frontend.development.rentencockpit.com/&quot;)&#10;    })&#10;&#10;    it(&quot;should $EXPECTED$&quot;, function() {&#10;      $END$&#10;    })&#10;  })&#10;})" description="insert describe block with context" toReformat="false" toShortenFQNames="true">
+    <variable name="PAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EXPECTED" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
