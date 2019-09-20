@@ -103,7 +103,7 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="fillInputPupp" value="get input$NAME$() { return &quot;&quot; }&#10;&#10;async fillInput$NAME$() {&#10;    await actionsType.typeAfter_expAnim(this.page, this.input$NAME$)&#10;}" description="Inserts block for getting button and clicking on it" toReformat="false" toShortenFQNames="true">
+  <template name="fillInputPupp" value="get input$NAME$() { return &quot;&quot; }&#10;&#10;async fillInput$NAME$(text) {&#10;    await actionsType.typeAfter_expAnim(this.page, this.input$NAME$, text)&#10;}" description="Inserts block for getting button and clicking on it" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="CSS" value="false" />
