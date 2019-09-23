@@ -53,8 +53,9 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="getbuttonclick" value="get button$NAME$() { return $(&quot;&quot;) }&#10;&#10;clickButton$NAME$() {&#10;    this.button$NAME$.waitForExist()&#10;    this.button$NAME$.click()&#10;}" description="Inserts block for getting button and clicking on it" toReformat="false" toShortenFQNames="true">
+  <template name="clickButtonWdio" value="get button$NAME$() { return $(&quot;$SEL$&quot;) }&#10;&#10;clickButton$NAME$() {&#10;    this.button$NAME$.waitForExist()&#10;    this.button$NAME$.click()&#10;}" description="Inserts block for getting button and clicking on it" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="CSS" value="false" />
       <option name="CUCUMBER_FEATURE_FILE" value="false" />
@@ -78,6 +79,58 @@
   <template name="describerenten" value="describe(&quot;Unregistered user&quot;, function() {&#10;  context(&quot;who lands on $PAGE$&quot;, function() {&#10;    before(function (){&#10;      browser.url(&quot;http://frontend.development.rentencockpit.com/&quot;)&#10;    })&#10;&#10;    it(&quot;should $EXPECTED$&quot;, function() {&#10;      $END$&#10;    })&#10;  })&#10;})" description="insert describe block with context" toReformat="false" toShortenFQNames="true">
     <variable name="PAGE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="EXPECTED" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="clickButtonPupp" value="get button$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async clickButton$NAME$() {&#10;    await actionsClick.clickAfter_expAnim(this.page, this.button$NAME$)&#10;}" description="Inserts block for getting button and clicking on it" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="fillInputPupp" value="get input$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async fillInput$NAME$(text) {&#10;    await actionsType.typeAfter_expAnim(this.page, this.input$NAME$, text)&#10;}" description="Inserts block for getting button and clicking on it" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="actions import and init" value="import Actions$Type$ from &quot;../../../utils/actions/actions-$END$&quot;&#10;const  actions$Type$ = new Actions$Type$()" description="import actions" toReformat="false" toShortenFQNames="true">
+    <variable name="Type" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
