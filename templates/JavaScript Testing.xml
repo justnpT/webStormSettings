@@ -27,6 +27,7 @@
       <option name="JAVA_SCRIPT" value="false" />
       <option name="JSON" value="false" />
       <option name="JSP" value="false" />
+      <option name="JS_STATEMENT" value="false" />
       <option name="OTHER" value="true" />
       <option name="REQUEST" value="false" />
       <option name="SHELL_SCRIPT" value="false" />
