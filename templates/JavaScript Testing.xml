@@ -45,7 +45,7 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="importpage" value="import $NAME$ from &quot;../../../pages/$DIR$&quot;&#10;const $INSTANCE$ = new $NAME$()" description="Inserts page import and const block" toReformat="false" toShortenFQNames="true">
+  <template name="importPage" value="import $NAME$ from &quot;../../../pages/$DIR$&quot;&#10;const $INSTANCE$ = new $NAME$()" description="Import page from pages and init" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="DIR" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="INSTANCE" expression="" defaultValue="" alwaysStopAt="true" />
@@ -147,6 +147,14 @@
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="importResources" value="import $NAME$ from &quot;../../../resources/$DIR$&quot;&#10;const $INSTANCE$ = new $NAME$()" description="import resources: registeredUsers, freshUsers, productData" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DIR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="INSTANCE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
