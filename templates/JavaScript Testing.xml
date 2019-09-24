@@ -53,7 +53,7 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="clickButtonWdio" value="get button$NAME$() { return $(&quot;$SEL$&quot;) }&#10;&#10;clickButton$NAME$() {&#10;    this.button$NAME$.waitForExist()&#10;    this.button$NAME$.click()&#10;}" description="Inserts block for getting button and clicking on it" toReformat="false" toShortenFQNames="true">
+  <template name="clickButtonWdio" value="get button$NAME$() { return $(&quot;$SEL$&quot;) }&#10;&#10;clickButton$NAME$() {&#10;    this.button$NAME$.waitForExist()&#10;    this.button$NAME$.click()&#10;}" description="insert block for clicking on button for webdriver IO" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -83,7 +83,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="clickButtonPupp" value="get button$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async clickButton$NAME$() {&#10;    await actionsClick.clickAfter_expAnim(this.page, this.button$NAME$)&#10;}" description="Inserts block for getting button and clicking on it" toReformat="false" toShortenFQNames="true">
+  <template name="clickButtonPupp" value="get button$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async clickButton$NAME$() {&#10;    await actionsClick.clickAfter_expAnim(this.page, this.button$NAME$)&#10;}" description="insert block for clicking on button for puppeteer" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -106,7 +106,7 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="fillInputPupp" value="get input$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async fillInput$NAME$(text) {&#10;    await actionsType.typeAfter_expAnim(this.page, this.input$NAME$, text)&#10;}" description="Inserts block for getting button and clicking on it" toReformat="false" toShortenFQNames="true">
+  <template name="fillInputPupp" value="get input$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async fillInput$NAME$(text) {&#10;    await actionsType.typeAfter_expAnim(this.page, this.input$NAME$, text)&#10;}" description="insert block for filling input for puppeteer" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -136,6 +136,13 @@
     </context>
   </template>
   <template name="get inputErrorWdio" value="get input$NAME$ErrorSelector() {return $SEL$}&#10;get input$NAME$Error() {return $(this.input$NAME$ErrorSelector)}" description="Insert input error block for seleniom webdriver io" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="fillInputWdio" value="get input$NAME$() { return $(&quot;$SEL$&quot;) }&#10;&#10;fillInput$NAME$(text) {&#10;    this.input$NAME$.waitForExist()&#10;    this.input$NAME$.setValue(text)&#10;}" description="insert block for filling input for webdriver IO" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
