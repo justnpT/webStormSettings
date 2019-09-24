@@ -106,9 +106,10 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="fillInputPupp" value="get input$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async fillInput$NAME$(text) {&#10;    await actionsType.typeAfter_expAnim(this.page, this.input$NAME$, text)&#10;}" description="insert block for filling input for puppeteer" toReformat="false" toShortenFQNames="true">
+  <template name="fillInputPupp" value="get input$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async fillInput$NAME$($PARAM$) {&#10;    await actionsType.typeAfter_expAnim(this.page, this.input$NAME$, $PARAM$)&#10;}" description="insert block for filling input for puppeteer" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="CSS" value="false" />
       <option name="CUCUMBER_FEATURE_FILE" value="false" />
@@ -142,9 +143,10 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="fillInputWdio" value="get input$NAME$() { return $(&quot;$SEL$&quot;) }&#10;&#10;fillInput$NAME$(text) {&#10;    this.input$NAME$.waitForExist()&#10;    this.input$NAME$.setValue(text)&#10;}" description="insert block for filling input for webdriver IO" toReformat="false" toShortenFQNames="true">
+  <template name="fillInputWdio" value="get input$NAME$() { return $(&quot;$SEL$&quot;) }&#10;&#10;fillInput$NAME$($PARAM$) {&#10;    this.input$NAME$.waitForExist()&#10;    this.input$NAME$.setValue($PARAM$)&#10;}" description="insert block for filling input for webdriver IO" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
