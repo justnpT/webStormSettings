@@ -1,0 +1,7 @@
+<templateSet group="user">
+  <template name="import chai wdio" value="let chai = require(&quot;chai&quot;)&#10;let chaiWebdriver = require(&quot;chai-webdriverio&quot;).default&#10;chai.use(chaiWebdriver(browser))&#10;let expect = chai.expect" description="insert chai imports" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
