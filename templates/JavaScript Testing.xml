@@ -129,7 +129,7 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="actions import and init" value="import Actions$Type$ from &quot;../../../utils/actions/actions-$END$&quot;&#10;const  actions$Type$ = new Actions$Type$()" description="import actions" toReformat="false" toShortenFQNames="true">
+  <template name="actions import and init" value="import Actions$Type$ from &quot;../../utils/actions/actions-$END$&quot;&#10;const  actions$Type$ = new Actions$Type$()" description="import actions" toReformat="false" toShortenFQNames="true">
     <variable name="Type" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
