@@ -130,13 +130,13 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="iimport actions and init" value="import Actions$Type$ from &quot;../../utils/actions/actions-$END$&quot;&#10;const  actions$Type$ = new Actions$Type$()" description="import actions" toReformat="false" toShortenFQNames="true">
+  <template name="actions import and init" value="import Actions$Type$ from &quot;../../utils/actions/actions-$END$&quot;&#10;const  actions$Type$ = new Actions$Type$()" description="import actions" toReformat="false" toShortenFQNames="true">
     <variable name="Type" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="get inputErrorWdio" value="get input$NAME$ErrorSelector() {return $SEL$}&#10;get input$NAME$Error() {return $(this.input$NAME$ErrorSelector)}" description="Insert input error block for seleniom webdriver io" toReformat="false" toShortenFQNames="true">
+  <template name="get inputErrorWdio" value="input$NAME$ErrorSelector() = $SEL$&#10;get input$NAME$Error() {return $(this.input$NAME$ErrorSelector)}" description="Insert input error block for seleniom webdriver io" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
