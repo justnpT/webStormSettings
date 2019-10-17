@@ -53,7 +53,7 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="get clickButtonWdio" value="get button$NAME$() { return $(&quot;$SEL$&quot;) }&#10;&#10;clickButton$NAME$() {&#10;  this.button$NAME$.waitForExist()&#10;  this.button$NAME$.click()&#10;}" description="insert block for clicking on button for webdriver IO" toReformat="false" toShortenFQNames="true">
+  <template name="get clickButtonWdio" value="get button$NAME$() { return $(&quot;$SEL$&quot;) }&#10;&#10;clickButton$NAME$() {&#10;  this.baseClickButton(this.button$NAME$)&#10;}" description="insert block for clicking on button for webdriver IO" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
