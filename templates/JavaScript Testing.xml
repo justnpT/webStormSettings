@@ -194,4 +194,12 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
+  <template name="fillDateInputWdioManual" value="    $name2$Selector = &quot;form [data-automation=DatePicker]:nth-child($nth$) [role=presentation]&quot;&#10;$END$&#10;fill$name$Input(date) {&#10;  this.baseFillDateInput(this.$name2$Selector, date)&#10;}" description="fill date input in manual data entry" toReformat="false" toShortenFQNames="true">
+    <variable name="name2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="nth" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
 </templateSet>
