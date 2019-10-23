@@ -187,7 +187,7 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="fillInputWdioManual" value="  get input$NAME$() { return $(&quot;[data-automation=TextInput] [title=$NAME2$]&quot;) }&#10;$END$&#10;fillInput$NAME$($NAME2$) {&#10;  this.baseFillInput(this.input$NAME$, $NAME2$)&#10;}&#10;" description="insert block for filling input for webdriver IO" toReformat="false" toShortenFQNames="true">
+  <template name="fillInputWdioManual" value="  get input$NAME$() { return $(&quot;[data-automation=TextInput] [placeholder=$NAME2$]&quot;) }&#10;$END$&#10;fillInput$NAME$($NAME2$) {&#10;  this.baseFillInput(this.input$NAME$, $NAME2$)&#10;}&#10;" description="insert block for filling input for webdriver IO" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="NAME2" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
