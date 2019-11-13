@@ -202,7 +202,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="clickButtonAsync replace" value="get button$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async clickButton$NAME$($REPLACE$) {&#10;    await this.baseClickButton(this.button$NAME$.replace(&quot;$\$REPLACE$\$&quot;, $REPLACE$)&#10;}" description="insert block for clicking on button for puppeteer" toReformat="false" toShortenFQNames="true">
+  <template name="clickButtonAsync replace" value="get button$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async clickButton$NAME$($REPLACE$) {&#10;    await this.baseClickButton(this.button$NAME$.replace(&quot;$ $REPLACE$$&quot;, $REPLACE$)&#10;}" description="insert block for clicking on button for puppeteer" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="REPLACE" expression="" defaultValue="" alwaysStopAt="true" />
