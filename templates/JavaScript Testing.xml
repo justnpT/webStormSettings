@@ -106,7 +106,7 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="fillInputPupp" value="get input$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async fillInput$NAME$($PARAM$) {&#10;    await actionsType.typeAfter_expAnim(this.page, this.input$NAME$, $PARAM$)&#10;}" description="insert block for filling input for puppeteer" toReformat="false" toShortenFQNames="true">
+  <template name="fillInputPupp" value="get input$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async fillInput$NAME$($PARAM$) {&#10;    await this.baseFillInput(this.input$NAME$, $PARAM$)&#10;}" description="insert block for filling input for puppeteer" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
@@ -143,7 +143,7 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="fillInputWdio" value="  get input$NAME$() { return $(&quot;$SEL$&quot;) }&#10;$END$&#10;fillInput$NAME$($PARAM$) {&#10;    this.baseFillInput(this.input$NAME$, $PARAM$)&#10;}" description="insert block for filling input for webdriver IO" toReformat="false" toShortenFQNames="true">
+  <template name="fillInputWdio" value="get input$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;fillInput$NAME$($PARAM$) {&#10;    await this.baseFillInput(this.input$NAME$, $PARAM$)&#10;}" description="insert block for filling input for webdriver IO" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
