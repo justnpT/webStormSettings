@@ -52,7 +52,7 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="get clickButtonWdio" value="get button$NAME$() { return $(&quot;$SEL$&quot;) }&#10;&#10;clickButton$NAME$() {&#10;  this.baseClickButton(this.button$NAME$)&#10;}" description="insert block for clicking on button for webdriver IO" toReformat="false" toShortenFQNames="true">
+  <template name="clickButton" value="get button$NAME$() { return $(&quot;$SEL$&quot;) }&#10;&#10;clickButton$NAME$() {&#10;  this.baseClickButton(this.button$NAME$)&#10;}" description="insert block for clicking on button for webdriver IO" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -75,14 +75,7 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="describerenten" value="describe(&quot;Unregistered user&quot;, function() {&#10;  context(&quot;who lands on $PAGE$&quot;, function() {&#10;    before(function (){&#10;      browser.url(&quot;http://frontend.development.rentencockpit.com/&quot;)&#10;    })&#10;&#10;    it(&quot;should $EXPECTED$&quot;, function() {&#10;      $END$&#10;    })&#10;  })&#10;})" description="insert describe block with context" toReformat="false" toShortenFQNames="true">
-    <variable name="PAGE" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="EXPECTED" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_SCRIPT" value="true" />
-    </context>
-  </template>
-  <template name="get clickButtonPupp" value="get button$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async clickButton$NAME$() {&#10;    await actionsClick.clickAfter_expAnim(this.page, this.button$NAME$)&#10;}" description="insert block for clicking on button for puppeteer" toReformat="false" toShortenFQNames="true">
+  <template name="clickButtonAsync" value="get button$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async clickButton$NAME$() {&#10;    await this.baseClickButton(this.button$NAME$)&#10;}" description="insert block for clicking on button for puppeteer" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -105,7 +98,7 @@
       <option name="XML" value="false" />
     </context>
   </template>
-  <template name="fillInputPupp" value="get input$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async fillInput$NAME$($PARAM$) {&#10;    await actionsType.typeAfter_expAnim(this.page, this.input$NAME$, $PARAM$)&#10;}" description="insert block for filling input for puppeteer" toReformat="false" toShortenFQNames="true">
+  <template name="fillInput async" value="get input$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async fillInput$NAME$($PARAM$) {&#10;    await this.baseFillInput(this.input$NAME$, $PARAM$)&#10;}" description="insert block for filling input for puppeteer" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
@@ -142,18 +135,10 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="fillInputWdio" value="  get input$NAME$() { return $(&quot;$SEL$&quot;) }&#10;$END$&#10;fillInput$NAME$($PARAM$) {&#10;    this.baseFillInput(this.input$NAME$, $PARAM$)&#10;}" description="insert block for filling input for webdriver IO" toReformat="false" toShortenFQNames="true">
+  <template name="fillInput" value="get input$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;fillInput$NAME$($PARAM$) {&#10;    await this.baseFillInput(this.input$NAME$, $PARAM$)&#10;}" description="insert block for filling input for webdriver IO" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="JAVA_SCRIPT" value="true" />
-    </context>
-  </template>
-  <template name="importResources" value="import $NAME$ from &quot;../../../resources/$DIR$&quot;&#10;const $INSTANCE$ = new $NAME$()" description="import resources: registeredUsers, freshUsers, productData" toReformat="false" toShortenFQNames="true">
-    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="DIR" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="INSTANCE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
     </context>
@@ -199,6 +184,30 @@
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="clickButtonAsync replace" value="get button$NAME$() { return &quot;$SEL$&quot; }&#10;&#10;async clickButton$NAME$($REPLACE$) {&#10;    await this.baseClickButton(this.button$NAME$.replace(&quot;$ $REPLACE$$&quot;, $REPLACE$)&#10;}" description="insert block for clicking on button for puppeteer" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SEL" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="REPLACE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="ECMAScript6" value="false" />
+      <option name="HAML" value="false" />
+      <option name="HTML" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="JSP" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="REQUEST" value="false" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="Vue" value="false" />
+      <option name="XML" value="false" />
     </context>
   </template>
 </templateSet>
